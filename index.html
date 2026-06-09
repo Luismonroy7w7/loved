@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Felicidades mi niña pechocha ✨</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      min-height:100vh;
+      overflow:hidden;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:white;
+      background: radial-gradient(circle at 50% 15%, #46306f 0%, #171634 38%, #070817 100%);
+      display:grid;
+      place-items:center;
+    }
+    .sky{position:fixed;inset:0;overflow:hidden;z-index:0}
+    .glow{
+      position:absolute; width:46rem; height:46rem; border-radius:50%;
+      background: radial-gradient(circle, rgba(255,128,203,.30), transparent 65%);
+      left:50%; top:45%; transform:translate(-50%,-50%);
+      filter: blur(8px); animation:pulse 5s ease-in-out infinite;
+    }
+    @keyframes pulse{50%{transform:translate(-50%,-50%) scale(1.1);opacity:.75}}
+    .star{
+      position:absolute; width:2px;height:2px;border-radius:50%; background:#fff;
+      box-shadow:0 0 10px #fff; opacity:.75; animation:twinkle 2.7s infinite ease-in-out;
+    }
+    @keyframes twinkle{50%{opacity:.25; transform:scale(.65)}}
+    .shooting-star{
+      position:fixed; top:-90px; left:72%; width:9px; height:9px; border-radius:50%;
+      background:#fff; box-shadow:0 0 18px #fff, 0 0 38px #ff8ad8, 0 0 70px #ff4fbd;
+      z-index:4; animation:fallStar 4.8s ease-in-out infinite;
+    }
+    .shooting-star::before{
+      content:""; position:absolute; right:6px; top:4px; width:190px; height:3px;
+      background:linear-gradient(90deg, transparent, rgba(255,154,220,.95), white);
+      transform:rotate(-28deg); transform-origin:right center; filter:blur(.3px);
+    }
+    @keyframes fallStar{
+      0%{transform:translate(0,0) rotate(0); opacity:0}
+      8%{opacity:1}
+      58%{transform:translate(-52vw,62vh) rotate(20deg); opacity:1}
+      66%{transform:translate(-55vw,68vh) scale(1.7); opacity:1}
+      72%{transform:translate(-55vw,68vh) scale(.2); opacity:0}
+      100%{transform:translate(-55vw,68vh) scale(.2); opacity:0}
+    }
+    .burst{
+      position:fixed; left:17%; top:68%; width:18px; height:18px; border-radius:50%;
+      background:transparent; z-index:3; animation:burst 4.8s infinite ease-in-out;
+    }
+    .burst::before,.burst::after{
+      content:""; position:absolute; inset:-55px; border-radius:50%; border:2px solid rgba(255,150,220,.8);
+      animation:ring 4.8s infinite ease-in-out;
+    }
+    .burst::after{inset:-90px; opacity:.6; animation-delay:.08s}
+    @keyframes burst{0%,62%,100%{opacity:0} 66%,78%{opacity:1}}
+    @keyframes ring{0%,62%{transform:scale(.1);opacity:0}70%{opacity:.8}84%,100%{transform:scale(1.1);opacity:0}}
+    .heart{
+      position:fixed; top:-40px; z-index:2; color:#ff9bd8; font-size:22px;
+      text-shadow:0 0 15px rgba(255,105,190,.85); animation:heartFall linear infinite;
+    }
+    @keyframes heartFall{
+      to{transform:translateY(110vh) rotate(360deg); opacity:.15}
+    }
+    .card{
+      position:relative; z-index:5; width:min(92vw,760px); padding:46px 34px;
+      text-align:center; border:1px solid rgba(255,255,255,.18); border-radius:34px;
+      background:linear-gradient(135deg, rgba(255,255,255,.13), rgba(255,255,255,.05));
+      box-shadow:0 26px 90px rgba(0,0,0,.45), inset 0 0 35px rgba(255,255,255,.07);
+      backdrop-filter: blur(16px);
+      animation:float 4.5s ease-in-out infinite;
+    }
+    @keyframes float{50%{transform:translateY(-10px)}}
+    .badge{display:inline-block; padding:10px 18px; border-radius:999px; background:rgba(255,126,205,.18); border:1px solid rgba(255,182,226,.35); margin-bottom:20px; letter-spacing:.08em; text-transform:uppercase; font-size:13px}
+    h1{
+      font-size:clamp(2.6rem,8vw,5.6rem); line-height:.95; margin-bottom:16px;
+      background:linear-gradient(90deg,#fff,#ffd1ec,#ff7bcb,#fff); -webkit-background-clip:text; color:transparent;
+      text-shadow:0 0 40px rgba(255,112,203,.35);
+    }
+    p{font-size:clamp(1.05rem,2.8vw,1.45rem); color:#ffeaf6; line-height:1.55; max-width:620px; margin:auto}
+    .button{
+      margin-top:28px; border:0; border-radius:999px; padding:14px 24px; cursor:pointer;
+      color:white; font-weight:800; font-size:1rem; background:linear-gradient(135deg,#ff5fbd,#ff9edc);
+      box-shadow:0 12px 35px rgba(255,83,187,.38); transition:.25s;
+    }
+    .button:hover{transform:translateY(-3px) scale(1.03); box-shadow:0 16px 45px rgba(255,83,187,.55)}
+    .moon{position:fixed;right:8vw;top:8vh;width:92px;height:92px;border-radius:50%; background:#fff3c9; box-shadow:0 0 35px rgba(255,243,201,.8); z-index:1}
+    .moon::after{content:"";position:absolute;right:20px;top:8px;width:82px;height:82px;border-radius:50%;background:#201a43}
+  </style>
+</head>
+<body>
+  <div class="sky" id="sky"><div class="glow"></div><div class="moon"></div></div>
+  <div class="shooting-star"></div>
+  <div class="burst"></div>
+
+  <main class="card">
+    <div class="badge">✨ Para la más bonita ✨</div>
+    <h1>Felicidades<br>mi niña pechocha</h1>
+    <p>
+      Estoy muy orgulloso de usted, mi niña pechocha. Jamás te des por vencida! 💗
+    </p>
+    <button class="button" onclick="loveExplosion()">Toca aquí 💖</button>
+  </main>
+
+  <script>
+    const sky = document.getElementById('sky');
+    for(let i=0;i<95;i++){
+      const s=document.createElement('span');
+      s.className='star';
+      s.style.left=Math.random()*100+'vw';
+      s.style.top=Math.random()*100+'vh';
+      s.style.animationDelay=Math.random()*3+'s';
+      s.style.transform=`scale(${.6+Math.random()*1.6})`;
+      sky.appendChild(s);
+    }
+    function makeHeart(extra=false){
+      const h=document.createElement('div');
+      h.className='heart';
+      h.textContent=['💗','💖','💕','💞','🩷'][Math.floor(Math.random()*5)];
+      h.style.left=Math.random()*100+'vw';
+      h.style.fontSize=(extra?24:15)+Math.random()*(extra?28:20)+'px';
+      h.style.animationDuration=(extra?2.5:5)+Math.random()*6+'s';
+      h.style.animationDelay=Math.random()*2+'s';
+      h.style.opacity=.55+Math.random()*.45;
+      document.body.appendChild(h);
+      setTimeout(()=>h.remove(),12000);
+    }
+    setInterval(()=>makeHeart(false),220);
+    for(let i=0;i<25;i++) makeHeart(false);
+    function loveExplosion(){
+      for(let i=0;i<75;i++) setTimeout(()=>makeHeart(true), i*18);
+      document.querySelector('.card').animate([
+        {transform:'scale(1)'},{transform:'scale(1.035)'},{transform:'scale(1)'}
+      ],{duration:520,easing:'ease-out'});
+    }
+  </script>
+</body>
+</html>
